@@ -1,0 +1,27 @@
+version: '1.0'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/var/www/html
+    container_name: appIngressos
+
+
+  nginx:
+    image: nginx:latest
+    container_name: nginxIngressos
+    ports:
+      - "8080:80"
+    volumes: 
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./public:/var/www/html/public
+    depends_on:
+      - app
+
+  redis:
+    image: redis:latest
+    container_name: redisIngressos
+    ports:
+      - "6379:6379"
+
