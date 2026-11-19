@@ -13,6 +13,12 @@ class Response
                 ]
             ];
         }
-        return [];
+        return [
+            'status' => 404,
+            'body' => [
+                'status' => 'error',
+                'message' => 'Rota nao encontrada'
+            ]
+        ];
     }
 }
