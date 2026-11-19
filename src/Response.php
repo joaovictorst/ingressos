@@ -13,6 +13,15 @@ class Response
                 ]
             ];
         }
+        if ($uri === '/saude' and !empty($version)) {
+            return [
+                'status' => 200,
+                'body' => [
+                    'status' => 'ok',
+                    'versao' => $version
+                ]
+            ];
+        }
         return [
             'status' => 404,
             'body' => [
