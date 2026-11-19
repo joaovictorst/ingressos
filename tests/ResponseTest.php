@@ -12,4 +12,13 @@ class ResponseTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(200, $result['status']);
         $this->assertEquals(['status' => 'ok', 'versao' => '1.0.0'], $result['body']);
     }
+
+    public function testRotaInexistenteRetorna404()
+    {
+        $response = new Response();
+        $result = $response->init('/rota-teste', '1.0.0');
+
+        $this->assertEquals(404, $result['status']);
+        $this->assertEquals(['status' => 'error', 'message' => 'Rota nao encontrada'], $result['body']);
+    }
 }
