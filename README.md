@@ -31,8 +31,22 @@ Abre em http://localhost:8080.
 
 ## Rotas
 
+GET `/` — retorna status ok e versão da aplicação
+
+GET `/saude` — retorna status ok e versão da aplicação
+
+Qualquer outra rota retorna 404 com mensagem de rota não encontrada.
 
 ## Pastas
 
+`docs/` — anotações e diários de aprendizado
+
+`nginx/` — configuração do nginx
+
+`public/` — entrypoint da aplicação (index.php)
+
+`src/` — lógica da aplicação (Response.php)
+
+`tests/` — testes com PHPUnit
 
 ## Anotações
