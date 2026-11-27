@@ -50,3 +50,5 @@ Qualquer outra rota retorna 404 com mensagem de rota não encontrada.
 `tests/` — testes com PHPUnit
 
 ## Anotações
+
+Meu conflito 
